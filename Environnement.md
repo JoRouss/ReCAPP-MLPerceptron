@@ -1,4 +1,3 @@
-
-**Python 3+**
+# Python 3+
 py --version
 https://www.python.org/downloads/
