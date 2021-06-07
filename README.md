@@ -1,34 +1,34 @@
 # ReCAPP-MLPerceptron
 Activité pédagogique d'apprentissage machine sur une partie des données du projet ReCAPP.
 
-Outils utilisés:
-Python: le langage et l’interpréteur
-virtualenv: librairie python pour isoler les dépendances des autres projets sur le même ordinateur
-Jupyter: outil de prototype, permet d’exécuter des blocs de Python avec interface web
-numpy, pandas: librairies de manipulation de données, imaginez Excel mais en code
-scikit-learn: librairie d’apprentissage machine, simple mais CPU seulement
+Outils utilisés:  
+Python: le langage et l’interpréteur  
+virtualenv: librairie python pour isoler les dépendances des autres projets sur le même ordinateur  
+Jupyter: outil de prototype, permet d’exécuter des blocs de Python avec interface web  
+numpy, pandas: librairies de manipulation de données, imaginez Excel mais en code  
+scikit-learn: librairie d’apprentissage machine, simple mais CPU seulement  
 
 # Environnement
  Suivez les instructions de [Environnement.md](Environnement.md)  pour créer un environnement virtuel pour le projet.
 
 # Structure de projet
-- Téléchargez la structure de dossiers "ReCAPP_structure".
+- Téléchargez la structure de dossiers "ReCAPP_structure".  
 - Placez-la au même niveau que l'environnement que vous venez de créé.
 
 # Données
-Dans "ReCAPP_structure\data\processed", placez les deux dossiers d'images que votre enseignant vous a transmis.
+Dans "ReCAPP_structure\data\processed", placez les deux dossiers d'images que votre enseignant vous a transmis.  
 Les dossiers contiennent des images traitées et découpées de lançons (0) et d'éperlans (1).
 
 ![Annotations](/assets/Picture1.png "Annotations")
 
-Les images sont tirées des annotations (les cadres) faites sur les images du projet ReCAPP provenant de Exploramer.
+Les images sont tirées des annotations (les cadres) faites sur les images du projet ReCAPP provenant de Exploramer.  
 
 Cette laborieuse étape d'annotation a été faite au préalable et est omise dans ce projet pour sauver du temps. Le découpage a lui aussi déjà été fait pour éviter plusieurs gigabites de données.
 
 # Création du notebook
-Ouvrez Jupyter tel qu'expliqué précédemment.
+Ouvrez Jupyter tel qu'expliqué précédemment.  
 
-Dans Jupyter, sous "ReCAPP_structure\notebooks", cliquez sur "New", puis sur "Python 3".
+Dans Jupyter, sous "ReCAPP_structure\notebooks", cliquez sur "New", puis sur "Python 3".  
 ![New notebook](/assets/Picture2.png "New notebook")
 
 # Chargement des données
@@ -63,7 +63,7 @@ print("done!")
 ```
 
 # Multi-Layer Perceptron
-Architechture de base où tous les neurones sont interconnectés.
+Architechture de base où tous les neurones sont interconnectés.  
 C'est la raison pour laquelle nous avons redimensionné nos images uniformément.
 
 Il en résulte une perte de précision.
@@ -88,13 +88,14 @@ import sklearn.metrics as metrics
 metrics.plot_confusion_matrix(nn, data, labels)
 ```
 
-Comme on peut le constater, notre IA a énormément de difficulté à identifier des éperlans (1).
+Comme on peut le constater, notre IA a énormément de difficulté à identifier des éperlans (1).  
 Probable cause: On a 7494 lançons et 1117 éperlans. Si le réseau prédit toujours lançon, il aura raison dans 87% des cas.
 
 Pour y remédier, on va sur-échantillonner nos images d'éperlans.
 
 # Sur échantillonnage des éperlans
 ## Séparation par classe
+
 ```python
 data_lancons = []
 data_eperlans = []
@@ -146,17 +147,17 @@ metrics.plot_confusion_matrix(nn, data, labels)
 Le résultat est pire! Voyons comment on pourrait améliorer notre résultat.
 
 # Améliorations
--Nombre d'itérations: Faites passer "max-iter" de 12 à 40.
+-Nombre d'itérations: Faites passer "max-iter" de 12 à 40.  
 
--Taille du lot: On peut jouer avec la taille du lot, mais notre mémoire graphique contraint sa taille maximale.
-Ouvrez le gestionnaire de tâches, onglet performance, graphique de mémoire.
-Expérimentez en ajoutant batch_size=200, 2000, 20000.
+-Taille du lot: On peut jouer avec la taille du lot, mais notre mémoire graphique contraint sa taille maximale.  
+Ouvrez le gestionnaire de tâches, onglet performance, graphique de mémoire.  
+Expérimentez en ajoutant batch_size=200, 2000, 20000.  
 
--Taille des images: On peut augmenter la précision de nos images en changeant "uniformized_image_size".
+-Taille des images: On peut augmenter la précision de nos images en changeant "uniformized_image_size".  
 
--Nombre de neuronnes: "hidden_layer_sizes".
+-Nombre de neuronnes: "hidden_layer_sizes".  
 
--Learning rate: Vitesse d'adaptation à l'erreur. Essayez avec learning_rate_init=0.00005.
+-Learning rate: Vitesse d'adaptation à l'erreur. Essayez avec learning_rate_init=0.00005.  
 
 ```python
 from sklearn.neural_network import MLPClassifier
