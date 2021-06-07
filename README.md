@@ -1,5 +1,5 @@
 # ReCAPP-MLPerceptron
-Activité pédagogique de deep learning sur une partie des données du projet ReCAPP.
+Activité pédagogique d'apprentissage machine sur une partie des données du projet ReCAPP.
 
 Outils utilisés:
 Python: le langage et l’interpréteur
