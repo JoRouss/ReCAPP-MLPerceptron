@@ -9,7 +9,7 @@ numpy, pandas: librairies de manipulation de données, imaginez Excel mais en co
 scikit-learn: librairie d’apprentissage machine, simple mais CPU seulement
 
 # Environnement
- Suivez les instructions de Environnement.md pour créer un environnement virtuel pour le projet.
+ Suivez les instructions de [Environnement.md](Environnement.md)  pour créer un environnement virtuel pour le projet.
 
 # Structure de projet
 - Téléchargez la structure de dossiers "ReCAPP_structure".
