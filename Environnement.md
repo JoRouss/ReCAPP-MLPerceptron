@@ -1,22 +1,25 @@
-# Python 3+
-py --version
+# Python 3.6
+https://www.python.org/downloads/release/python-368/
 
-https://www.python.org/downloads/
+Installez python à partir du lien précédent.
 
-# PIP
-py -m pip install --upgrade pip
+# Environnement virtuel
+- Ouvrez un invite de commande et placez-vous à la racine de votre répertoire de projet. (Un dossier vide, ex: "Projet ReCAPP")
+- Exécutez les ligne de commande suivantes:
 
-# Tensorflow
-py -m pip install --user --upgrade tensorflow
+python -m pip install --user -U virtualenv
+python -m virtualenv ReCAPP_environnement
 
-py -m pip show tensorflow
+- Activez l'environnement avec la commande suivante:
 
-# Keras
-py -m pip install keras
+.\ReCAPP_environnement\Scripts\activate
 
-py -m pip install keras-applications
+- Installez les dépendances que nous allons utiliser à l'aide de la commande suivante (l'opération peut prendre une minute):
 
-py -m pip list | select-string 'Keras'
+python -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn imageio
 
-On devrait retrouver Keras, Keras-Applications et Keras-Preprocessing.
+- Ouvrez Jupyter avec la commande suivante:
 
+jupyter notebook
+
+À l'avenir, pour ouvrir Jupyter, vous devrez lancer la console, activer l'environnement et lancer Jupyter avec les deux commandes ci-haut.
