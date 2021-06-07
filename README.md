@@ -1,4 +1,4 @@
-# ReCAPP-DeepLearning
+# ReCAPP-MLPerceptron
 Activité pédagogique de deep learning sur une partie des données du projet ReCAPP.
 
 Outils utilisés:
