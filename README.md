@@ -203,3 +203,5 @@ metrics.plot_confusion_matrix(nn, test_data, test_labels)
 Résultat final:
 
 ![Resultats2](/assets/Picture4.png "Resultats2")
+
+À vous d'essayer de faire mieux!
