@@ -1,5 +1,5 @@
 # ReCAPP-MLPerceptron
-Activité pédagogique d'apprentissage machine sur une partie des données du projet ReCAPP.  
+Activité pédagogique d'apprentissage machine sur une partie des données du projet ReCAPP (Reconnaissance et classification automatiques de poissons pélagiques dans l'estuaire et le golfe du Saint-Laurent). Ce projet a été financé par le Programme d'aide à la recherche et au transfert (PART) du ministère de l'Éducation et de l'Enseignement supérieur du Québec.  
 
 Outils utilisés:  
 - Python: le langage et l’interpréteur  
