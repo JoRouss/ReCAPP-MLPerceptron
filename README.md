@@ -1,14 +1,16 @@
 # ReCAPP-MLPerceptron
 Activité pédagogique d'apprentissage machine sur une partie des données du projet ReCAPP.  
 
-Elle est une adaptation d'un chapitre d'une formation dispensée par Olivier Leclerc (https://github.com/oleclerc)
-
 Outils utilisés:  
 - Python: le langage et l’interpréteur  
 - virtualenv: librairie python pour isoler les dépendances des autres projets sur le même ordinateur  
 - Jupyter: outil de prototype, permet d’exécuter des blocs de Python avec interface web  
 - numpy, pandas: librairies de manipulation de données, imaginez Excel mais en code  
 - scikit-learn: librairie d’apprentissage machine, simple mais CPU seulement  
+
+# Crédits
+Cette activitée est une adaptation d'un chapitre d'une formation dispensée par Olivier Leclerc (https://github.com/oleclerc)  
+Les images ont été filmées par Margaret Kraenzel, enseignante en biologie au Cégep de Matane, et David Pelletier, enseignant en biologie au Cégep de Rimouski, dans les bassins du musée Exploramer à Sainte-Anne-des-Monts.
 
 # Environnement
  Suivez les instructions de [Environnement.md](Environnement.md)  pour créer un environnement virtuel pour le projet.
