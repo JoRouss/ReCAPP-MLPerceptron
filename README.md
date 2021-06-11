@@ -88,6 +88,8 @@ import sklearn.metrics as metrics
 metrics.plot_confusion_matrix(nn, data, labels)
 ```
 
+![Matrice de confusion](/assets/Picture5.png "Matrice de confusion")
+
 Comme on peut le constater, notre IA a énormément de difficulté à identifier des éperlans (1).  
 Probable cause: On a 7494 lançons et 1117 éperlans. Si le réseau prédit toujours lançon, il aura raison dans 87% des cas.
 
@@ -95,6 +97,7 @@ Pour y remédier, on va sur-échantillonner nos images d'éperlans.
 
 # Sur échantillonnage des éperlans
 ## Séparation par classe
+On doit séparer nos données pour augmenter la quantité d'éperlans.
 
 ```python
 data_lancons = []
@@ -118,11 +121,14 @@ print("Lancons:", len(data_lancons), "Éperlans:", len(data_eperlans))
 ```
 
 ## Sklearn resample
+La fonction "resample" de Sklearn nous permet d'automatiquement augmenter la quantitée d'éperlans pour obtenir un nombre équivalent à celui de lançons.
+
 ```python
 from sklearn.utils import resample
 
 (data_eperlans_upsampled, labels_eperlans_upsampled) = resample(data_eperlans, labels_eperlans, n_samples=len(data_lancons), random_state=42)
 
+#Nos nouvelles données
 data_balanced = data_lancons + data_eperlans_upsampled
 labels_balanced = labels_lancons + labels_eperlans_upsampled
 
@@ -137,6 +143,7 @@ import pandas as pd
 
 nn = MLPClassifier(random_state=42, hidden_layer_sizes=(50,25), learning_rate_init=0.0000003, max_iter=12, verbose=2)
 
+#On utilise nos nouvelles listes
 nn.fit(data_balanced, labels_balanced)
 
 pd.DataFrame(nn.loss_curve_)[3:].plot()
@@ -147,15 +154,16 @@ metrics.plot_confusion_matrix(nn, data, labels)
 Le résultat est pire! Voyons comment on pourrait améliorer notre résultat.
 
 # Améliorations
--Nombre d'itérations: Faites passer "max-iter" de 12 à 40.  
+Voici quelques paramètres qui peuvent être modifiés qui impacteront les résultats obtenus.  
+
+-Nombre d'itérations: Faites passer "max-iter" à 40.  
 
 -Taille du lot: On peut jouer avec la taille du lot, mais notre mémoire graphique contraint sa taille maximale.  
-Ouvrez le gestionnaire de tâches, onglet performance, graphique de mémoire.  
-Expérimentez en ajoutant batch_size=200, 2000, 20000.  
+Expérimentez en ajoutant batch_size=5000.  
 
 -Taille des images: On peut augmenter la précision de nos images en changeant "uniformized_image_size".  
 
--Nombre de neuronnes: "hidden_layer_sizes".  
+-Nombre de neurones: "hidden_layer_sizes".  
 
 -Learning rate: Vitesse d'adaptation à l'erreur. Essayez avec learning_rate_init=0.00005.  
 
@@ -182,6 +190,7 @@ On veut se garder environ 20% de nos données pour pouvoir tester notre IA sur d
 ```python
 from sklearn.model_selection import train_test_split
 
+#Séparation automatique des données d'entrainement et de test
 train_data, test_data, train_labels, test_labels = train_test_split(data_balanced, labels_balanced, random_state=42)
 ```
 
@@ -194,15 +203,20 @@ import pandas as pd
 
 nn = MLPClassifier(random_state=42, hidden_layer_sizes=(50,25), learning_rate_init=0.00005, max_iter=40, verbose=2, batch_size=5000)
 
+#Entrainement fait sur les données d'entrainement
 nn.fit(train_data, train_labels)
 
 pd.DataFrame(nn.loss_curve_)[3:].plot()
+#Résultats sur les données d'entrainement
 metrics.plot_confusion_matrix(nn, train_data, train_labels)
+#Résultats sur les données de test
 metrics.plot_confusion_matrix(nn, test_data, test_labels)
 ```
 
 Résultat final:
 
 ![Resultats2](/assets/Picture4.png "Resultats2")
+
+On peut dire que notre IA performe bien autant sur les données d'entrainement que sur les données de test.
 
 À vous d'essayer de faire mieux!
