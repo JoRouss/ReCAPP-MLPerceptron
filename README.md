@@ -9,8 +9,8 @@ Outils utilisés:
 - scikit-learn: librairie d’apprentissage machine, simple mais CPU seulement  
 
 # Crédits
-Cette activitée est une adaptation d'un chapitre d'une formation dispensée par Olivier Leclerc (https://github.com/oleclerc)  
-Les images ont été filmées par Margaret Kraenzel, enseignante en biologie au Cégep de Matane, et David Pelletier, enseignant en biologie au Cégep de Rimouski, dans les bassins du musée Exploramer à Sainte-Anne-des-Monts.
+- Cette activitée est une adaptation d'un chapitre d'une formation dispensée par Olivier Leclerc (https://github.com/oleclerc)
+- Les images ont été filmées par Margaret Kraenzel, enseignante en biologie au Cégep de Matane, et David Pelletier, enseignant en biologie au Cégep de Rimouski, dans les bassins du musée Exploramer à Sainte-Anne-des-Monts.
 
 # Environnement
  Suivez les instructions de [Environnement.md](Environnement.md)  pour créer un environnement virtuel pour le projet.
