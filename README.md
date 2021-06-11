@@ -91,6 +91,10 @@ metrics.plot_confusion_matrix(nn, data, labels)
 ![Matrice de confusion](/assets/Picture5.png "Matrice de confusion")
 
 Comme on peut le constater, notre IA a énormément de difficulté à identifier des éperlans (1).  
+-Lorsque l'IA s'est fait montrer un lançon, elle a eu 5699 bonnes et 1795 mauvaises réponses.
+-Lorsque l'IA s'est fait présenter un éperlan, elle a eu 272 bonnes et 845 mauvaises réponses.
+
+
 Probable cause: On a 7494 lançons et 1117 éperlans. Si le réseau prédit toujours lançon, il aura raison dans 87% des cas.
 
 Pour y remédier, on va sur-échantillonner nos images d'éperlans.
