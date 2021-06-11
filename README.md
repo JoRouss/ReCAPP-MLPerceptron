@@ -37,7 +37,11 @@ Ouvrez Jupyter tel qu'expliqué précédemment.
 Dans Jupyter, sous "ReCAPP_structure\notebooks", cliquez sur "New", puis sur "Python 3".  
 ![New notebook](/assets/Picture2.png "New notebook")
 
+Ouvrez le notebook nouvellement créé.
+
 # Chargement des données
+Il suffit de copier/coller les blocs qui vont suivre dans le notebook et de les exécuter.
+
 ```python
 import numpy
 from PIL import Image
