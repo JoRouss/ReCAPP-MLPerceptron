@@ -151,6 +151,8 @@ pd.DataFrame(nn.loss_curve_)[3:].plot()
 metrics.plot_confusion_matrix(nn, data, labels)
 ```
 
+![Resultats3](/assets/Picture6.png "Resultats3")
+
 Le résultat est pire! Voyons comment on pourrait améliorer notre résultat.
 
 # Améliorations
