@@ -15,13 +15,19 @@ scikit-learn: librairie d’apprentissage machine, simple mais CPU seulement
 - Téléchargez la structure de dossiers "ReCAPP_structure".  
 - Placez-la au même niveau que l'environnement que vous venez de créé.
 
+![Structure](/assets/Picture7.png "Structure")
+
 # Données
-Dans "ReCAPP_structure\data\processed", placez les deux dossiers d'images que votre enseignant vous a transmis.  
+- Téléchargez le dossier "Data". 
+Dans "ReCAPP_structure\data\processed", placez les dossiers "0" et "1" que contient le dossier "Data".  
+
+![Data](/assets/Picture8.png "Data")
+
 Les dossiers contiennent des images traitées et découpées de lançons (0) et d'éperlans (1).
 
-![Annotations](/assets/Picture1.png "Annotations")
-
 Les images sont tirées des annotations (les cadres) faites sur les images du projet ReCAPP provenant de Exploramer.  
+
+![Annotations](/assets/Picture1.png "Annotations")
 
 Cette laborieuse étape d'annotation a été faite au préalable et est omise dans ce projet pour sauver du temps. Le découpage a lui aussi déjà été fait pour éviter plusieurs gigabites de données.
 
@@ -162,16 +168,16 @@ Le résultat est pire! Voyons comment on pourrait améliorer notre résultat.
 # Améliorations
 Voici quelques paramètres qui peuvent être modifiés qui impacteront les résultats obtenus.  
 
--Nombre d'itérations: Faites passer "max-iter" à 40.  
+- Nombre d'itérations: Faites passer "max-iter" à 40.  
 
--Taille du lot: On peut jouer avec la taille du lot, mais notre mémoire graphique contraint sa taille maximale.  
+- Taille du lot: On peut jouer avec la taille du lot, mais notre mémoire graphique contraint sa taille maximale.  
 Expérimentez en ajoutant batch_size=5000.  
 
--Taille des images: On peut augmenter la précision de nos images en changeant "uniformized_image_size".  
+- Taille des images: On peut augmenter la précision de nos images en changeant "uniformized_image_size".  
 
--Nombre de neurones: "hidden_layer_sizes".  
+- Nombre de neurones: "hidden_layer_sizes".  
 
--Learning rate: Vitesse d'adaptation à l'erreur. Essayez avec learning_rate_init=0.00005.  
+- Learning rate: Vitesse d'adaptation à l'erreur. Essayez avec learning_rate_init=0.00005.  
 
 ```python
 from sklearn.neural_network import MLPClassifier
