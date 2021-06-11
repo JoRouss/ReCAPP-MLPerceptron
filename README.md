@@ -172,6 +172,7 @@ from sklearn.neural_network import MLPClassifier
 import sklearn.metrics as metrics
 import pandas as pd
 
+#Certains paramètres ont été modifiés
 nn = MLPClassifier(random_state=42, hidden_layer_sizes=(50,25), learning_rate_init=0.00005, max_iter=40, verbose=2, batch_size=5000)
 
 nn.fit(data_balanced, labels_balanced)
