@@ -1,5 +1,5 @@
 # ReCAPP-MLPerceptron
-Activité pédagogique d'apprentissage machine sur une partie des données du projet ReCAPP (Reconnaissance et classification automatiques de poissons pélagiques dans l'estuaire et le golfe du Saint-Laurent). Ce projet a été financé par le Programme d'aide à la recherche et au transfert (PART) du ministère de l'Éducation et de l'Enseignement supérieur du Québec.  
+Activité pédagogique d'apprentissage machine sur une partie des données du projet ReCAPP (Reconnaissance et classification automatiques de poissons pélagiques dans l'estuaire et le golfe du Saint-Laurent). 
 
 Outils utilisés:  
 - Python: le langage et l’interpréteur  
@@ -11,6 +11,7 @@ Outils utilisés:
 # Crédits
 - Cette activitée est une adaptation d'un chapitre d'une formation dispensée par **Olivier Leclerc** (https://github.com/oleclerc)
 - Les images ont été filmées par **Margaret Kraenzel**, enseignante en biologie au Cégep de Matane, et **David Pelletier**, enseignant en biologie au Cégep de Rimouski, dans les bassins du musée **Exploramer** à Sainte-Anne-des-Monts.
+- Ce projet a été financé par le **Programme d'aide à la recherche et au transfert (PART)** du ministère de l'Éducation et de l'Enseignement supérieur du Québec.  
 
 # Environnement
  Suivez les instructions de [Environnement.md](Environnement.md)  pour créer un environnement virtuel pour le projet.
