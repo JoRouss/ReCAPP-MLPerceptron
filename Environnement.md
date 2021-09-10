@@ -7,7 +7,7 @@ Installez python à partir du lien précédent.
 - Ouvrez un invite de commande et placez-vous à la racine de votre répertoire de projet. (Un dossier vide, ex: "Projet ReCAPP")
 - Exécutez les ligne de commande suivantes:
 
-python -m pip install --user -U virtualenv
+python -m pip install --user -U virtualenv  
 python -m virtualenv ReCAPP_environnement
 
 - Activez l'environnement avec la commande suivante:
