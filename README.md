@@ -9,7 +9,7 @@ Outils utilisés:
 - scikit-learn: librairie d’apprentissage machine, simple mais CPU seulement  
 
 # Crédits
-- Cette activitée est une adaptation d'un chapitre d'une formation dispensée par **Olivier Leclerc** (https://github.com/oleclerc)
+- Cette activité est une adaptation d'un chapitre d'une formation dispensée par **Olivier Leclerc** (https://github.com/oleclerc)
 - Les images ont été filmées par **Margaret Kraenzel**, enseignante en biologie au Cégep de Matane, et **David Pelletier**, enseignant en biologie au Cégep de Rimouski, dans les bassins du musée **Exploramer** à Sainte-Anne-des-Monts.
 - Ce projet a été financé par le **Programme d'aide à la recherche et au transfert (PART)** du ministère de l'Éducation et de l'Enseignement supérieur du Québec.  
 
